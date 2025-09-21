@@ -61,7 +61,27 @@ pip install -r requirements.txt
 
 # Add Google OAuth credentials
 
-Place your client_secret.json file in the project root (download from Google Cloud Console).
+Create a file named `client_secret.json` in the project root with your OAuth credentials from Google Cloud Console.  
+The file should look like this:
+
+```json
+{
+  "web": {
+    "client_id": "<YOUR_CLIENT_ID>",
+    "project_id": "<YOUR_PROJECT_ID>",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "<YOUR_CLIENT_SECRET>",
+    "redirect_uris": [
+      "http://127.0.0.1:5000/callback"
+    ],
+    "javascript_origins": [
+      "http://127.0.0.1:5000"
+    ]
+  }
+}
+
 
 # Run the application
 
