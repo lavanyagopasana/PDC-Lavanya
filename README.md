@@ -1,70 +1,58 @@
 # PDC-Lavanya
 
+## Project Overview
 
-# Project Overview
+This project is a **Flask web application** created for the **PDC evaluation task**. It demonstrates:
 
-This project is a Flask web application created for the PDC evaluation task. It demonstrates:
+- **Google Authentication** using OAuth 2.0  
+- **Displaying user profile info** (name, email, profile picture)  
+- **Showing the current Indian time**  
+- **Generating a diamond pattern** with rotated text based on user input  
+- **A simple, clean, and responsive UI**
 
-Google Authentication using OAuth 2.0
+---
 
-Displaying user profile info (name, email, profile picture)
+## Features
 
-Showing the current Indian time
+### Phase 1: Authentication
 
-Generating a diamond pattern with rotated text based on user input
+- **Sign in with Google**  
+- **Display user name, email, and profile picture** (optional)  
+- **Show current Indian time**  
+- **Sign out functionality**
 
-A simple, clean, and responsive UI
+### Phase 2: Diamond Pattern
 
-# Features
+- **Input box for Number of Lines** (maximum 100)  
+- **Displays a diamond pattern with rotated text**  
+- **Pattern output is centered and uses a monospace font**  
+- **Back button to return to the main page**
 
-# Phase 1: Authentication
+---
 
-Sign in with Google
+## Setup Instructions
 
-Display user name, email, and profile picture (optional)
+# 1.Clone the repository
 
-Show current Indian time
-
-Sign out functionality
-
-# Phase 2: Diamond Pattern
-
-Input box for Number of Lines (maximum 100)
-
-Displays a diamond pattern with rotated text
-
-Pattern output is centered and uses a monospace font
-
-Back button to return to the main page
-
-
-# Setup Instructions
-
-# Clone the repository
-
+```bash
 git clone https://github.com/lavanyagopasana/PDC-Lavanya1.git
-cd PDC-Lavanya
+cd PDC-Lavanya1
 
-
-# Create a virtual environment
-
+# 2. Create and activate virtual environment
 python -m venv venv
+
 # Windows
 venv\Scripts\activate
+
 # macOS/Linux
-source venv/bin/activate
+# source venv/bin/activate
 
-
-# Install dependencies
-
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# Add Google OAuth credentials
-
-Create a file named `client_secret.json` in the project root with your OAuth credentials from Google Cloud Console.  
-The file should look like this:
-
-```json
+# 4. Add Google OAuth credentials
+# This will create client_secret.json in the project root
+cat > client_secret.json <<EOL
 {
   "web": {
     "client_id": "<YOUR_CLIENT_ID>",
@@ -81,28 +69,12 @@ The file should look like this:
     ]
   }
 }
+EOL
 
+echo "client_secret.json created. Make sure to replace <YOUR_CLIENT_ID> and <YOUR_CLIENT_SECRET> with actual values."
 
-# Run the application
-
+# 5. Run the Flask application
 python app.py
 
-# Open your browser at:
-
-http://127.0.0.1:5000/
-
-# Notes
-
-Ensure Number of Lines ≤ 100 when generating the diamond pattern.
-
-The output is centered and formatted using monospace font for correct alignment.
-
-Sign-in button and UI are designed to be clean and professional.
-
-# Author
-
-Lavanya Gopasana
-
-Email: lavanyagopasana@gmail.com
-
-GitHub: github.com/lavanyagopasana
+# 6. Open browser at
+# http://127.0.0.1:5000/
