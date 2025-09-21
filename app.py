@@ -121,7 +121,7 @@ def index():
                 transition: all 0.3s ease;
             " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)'" 
                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" style="width:22px; height:22px; background:white; border-radius:50%; padding:2px;">
+               <img src="{{ url_for('static', filename='img/g-logo.png') }}" alt="Google logo" style="width:22px; height:22px; background:white; border-radius:50%; padding:2px;">
                 Sign in with Google
             </button>
         </a>
